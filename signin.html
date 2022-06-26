@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta property="og:title" content="Đăng kí/ Đăng nhập"/>
+        <title>Đăng nhập</title>
+        <meta name="keywords" content="Web đặt đồ ăn vặt, nước uống"/>
+        <meta name="description" content="Trang đặt đồ ăn vặt, nước uống ngon bổ rẻ">
+        <link rel="stylesheet" href="signin.css"  >
+        <script src="signup.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome
+/4.7.0/css/font-awesome.min.css">
+
+        
+
+        
+    </head>
+    <body>
+        <div class="main">
+
+            <form action="" method="POST" class="form" id="form-1">
+              <h3 class="heading">Sign up</h3>
+              <p class="desc">Please, provide all the correct info to create an account</p>
+      
+              <div class="spacer"></div>
+      
+              <div class="form-group">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input id="fullname" name="fullname" type="text" placeholder="VD: Le Anh Thu" class="form-control">
+                <span class="form-message"></span>
+              </div>
+      
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: thule@gmail.com" class="form-control">
+                <span class="form-message"></span>
+              </div>
+      
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" name="password" type="password" placeholder="Typing your password " class="form-control">
+                <span class="form-message"></span>
+              </div>
+      
+              <div class="form-group">
+                <label for="password_confirmation" class="form-label">Password again</label>
+                <input id="password_confirmation" name="password_confirmation" placeholder="Typing your password again" type="password" class="form-control">
+                <span class="form-message"></span>
+              </div>
+      
+              <button class="form-submit">Sign up</button>
+              <br>
+              <p>---------------OR-----------------</p>
+              <div class="form-submit-icon">
+                <div class="face">
+                    <i class="fa fa-facebook-f"></i>
+                </div>
+                <div class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <div class="instagram">
+                    <i class="fa fa-instagram"></i>
+                </div>
+               
+                
+
+                <!-- <button class="form-submit">Login with Twitter</button> -->
+              </div>
+              
+              <div class="signin">
+                <p>Do you have an account?<a href="signup.html">Sign in</a></p>
+              </div>
+              
+            </form>
+      
+            
+          </div>
+          
+          <script>
+      
+            document.addEventListener('DOMContentLoaded', function () {
+              // Mong muốn của chúng ta
+              Validator({
+                form: '#form-1',
+                formGroupSelector: '.form-group',
+                errorSelector: '.form-message',
+                rules: [
+                  Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                  Validator.isEmail('#email'),
+                  Validator.minLength('#password', 6),
+                  Validator.isRequired('#password_confirmation'),
+                  Validator.isConfirmed('#password_confirmation', function () {
+                    return document.querySelector('#form-1 #password').value;
+                  }, 'Mật khẩu nhập lại không chính xác')
+                ],
+                onSubmit: function (data) {
+                  // Call API
+                  console.log(data);
+                }
+              });
+      
+      
+              
+            });
+      
+          </script>
+       
+          
+       
+        
+  
+    
+    </body>
+    </html>

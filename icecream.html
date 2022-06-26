@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:title" content="Kem" />
+    <title>Kem</title>
+    <meta name="keywords" content="Web đặt đồ ăn vặt, nước uống" />
+    <meta name="description" content="Trang đặt đồ ăn vặt, nước uống ngon bổ rẻ">
+    <link rel="stylesheet" href="icecream.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <script src="https://use.fontawesome.com/310daaf19a.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome
+/4.7.0/css/font-awesome.min.css">
+<script>
+    function openForm(){
+      document.getElementById("myForm").style.display="block";
+    }
+    function closeForm(){
+      document.getElementById("myForm").style.display="none";
+    }
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav-item");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+    
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="file:///E:/DoAn/index.html"><img src="https://i.pinimg.com/736x/27/8d/72/278d725d1207afe046467d56c257fba3.jpg" alt="logo"></a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        
+        
+        <div id="nav-item">
+            <ul>
+                <li><a  href="introduction.html"><i class="fa fa-home" ></i> GIỚI THIỆU</a></li>
+                <li class="dropdown"><a  href=""><i class="fa fa-coffee"></i>THỰC ĐƠN <i class="fa fa-caret-down"></i> </a>
+                   
+                        <ul class="dropdown_content">
+                            <li><a href="hotpot.html" >Lẩu</a></li>
+                            <li><a href="drink.html" >Thức uống</a></li>
+                            <li><a href="vietnamesefood.html" >Ăn vặt Việt Nam</a></li>
+                            <li><a href="koreanfood.html" >Ăn vặt Hàn Quốc</a></li>
+                        </ul>
+                </li>
+                <li><a href="contact.html"><i class="fa fa-phone"  ></i>0799352445</a></li>
+                <li><a href="signup.html" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"  ></i>ĐĂNG NHẬP</a></li>
+                
+                
+            </ul>
+        </div>
+        
+    </nav>
+    
+    <div class="headerimg">
+        <img src="https://binbadecor.com.vn/wp-content/uploads/2020/02/cach-thiet-ke-quan-nhau-binh-dan-dep-1.jpg"
+            alt="image">
+    </div>
+    <div class="content">
+        <div class="content_item">
+            <img src="https://i.pinimg.com/564x/41/27/02/4127023ca5b27208054096b2ed83f7bf.jpg" alt="image">
+        </div>
+        <div class="content_item">
+            <div class="content_wrap">
+                <div class="namefood">
+                    <h2>KEM</h2>
+                </div>
+                <div class="charge">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class>
+                                    <strong>Giá</strong>
+                                    :
+                                </td>
+                                <td class="cost">
+                                    20 Đ
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_item">
+            <div class="content_wrap">
+                <div class="stock">
+                    Còn hàng
+                </div>
+            </div>
+            <div class="content_wrap">
+                <div class="number">
+                    <label>Số lượng:</label><br>
+                    <input type="number" name="quantity" class="txt-quantity" placeholder="1" value="1" min="0"
+                        style="width:100%; height:40px">
+
+                </div>
+            </div>
+            <div class="content_wrap">
+                <div class="button-area">
+                    <button class="btn_add"><a href="cart.html">THÊM VÀO GIỎ</a></button>
+                    <button class="btn_buy"><a href="payment.html">MUA NGAY</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-item">
+        <div class="about-us">
+            <h2>About us</h2>
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/27/8d/72/278d725d1207afe046467d56c257fba3.jpg">
+            </div>
+            <div class="about-us-text">
+                <div class="text">
+                    <p>Cras non dui id ex mattis vehicula. Nullam posuere ligula non libero mollis, non ornare sapien rutrum. 
+                        Quisque vitae risus venenatis, dignissim felis id, vulputate nisl.
+                         Praesent sed felis aliquam, ullamcorper tellus.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-us">
+            <h2>Contact us</h2>
+            <div class="contact-item">
+                <i class="fa fa-phone"></i>0799352445<br>
+                <i class="fa fa-location-pin">470 Tran Dai Nghia</i>
+                <div class="social-icon">
+                    <a href="#"><i class="fa fa-facebook"  aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>          
+                </div>    
+            </div>
+        </div>
+       
+        <div class="quick-link">
+            <h2>Navigation Pane</h2>
+            <ul>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="hotpot.html">Menu</a></li>
+                <li><a href="#">Phone number</a></li>
+                <li><a href="signup.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+    </footer>
+        <!-- <button class="open-button" onlick="openForm()"><i class="fa fa-comments"></i></button> -->
+        <a href="javascript:void(0);" class="open-button" onclick="openForm()">
+            <i class="fa fa-comments"></i>
+        </a>
+        <div class="chat-popup" id="myForm">
+            <form class="form-container" action="#">
+                <div class="chat">
+                    <p>FIGUP</p>
+                    <a href="javascript:void(0);" class="cancel" onclick="closeForm()"><i class="fa fa-minus"></i></a>
+                </div>
+                
+                <div class="typearea">
+                    <textarea placeholder="Type your message...." name="msg" required></textarea>
+                </div>
+                <div class="send">
+                    <div class="send-item">
+                        <label class="mess">
+                            <input type="text" placeholder="Message">
+                        </label>
+                    </div>
+                    <div class="send-item">
+                        <div class="icon-send">
+                            <i class="fa fa-paper-plane"></i>
+                        </div>
+                    </div>
+        
+                </div>
+               
+                
+
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>

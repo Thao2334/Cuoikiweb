@@ -1,0 +1,606 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    box-sizing: border-box;
+    
+    
+}
+nav{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    margin-top: 0,1%;
+    background-color: black;
+    /* position:fixed; */
+    left:0px;
+    top:0px;
+    position:fixed;
+     z-index: 100;
+  
+}
+
+
+.logo img{
+    width:200px;
+    height:100px;
+    
+}
+.icon{
+    margin-top:40px;
+    font-size: 19px;
+    cursor:pointer;
+    float:right;
+    display:none;
+    color:white;
+}
+@media (max-width:800px){
+    nav{
+        position:fixed;
+        z-index: 100;
+    }
+    nav .icon{
+        display:block;
+
+    }
+    nav ul{
+        position:fixed;
+        width:100%;
+        height:500px;
+        background-color:black;
+        top:80px;
+        left:0;
+        /* text-align: center; */
+        display:flex;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+
+        
+    }
+    nav ul li{
+        
+        display:block;
+        padding-bottom:40px;
+        line-height: 30px;
+        
+
+    }
+    .dropdown{
+        z-index: 100;
+    }
+   
+    nav ul li a:hover{
+        color:#0d89f0;
+    
+    }
+    .dropdown_content{
+        display:none;
+        position:absolute;
+        padding:12px 16px;
+        z-index: 100;
+    }
+    
+    nav ul.show{
+        
+        display:on;
+    }
+}
+#nav-item {
+    display: flex;
+    align-items: center;
+    margin-top:3px;
+}
+nav ul{
+    float:right;
+    text-align: center;
+}
+nav ul li{
+    width: 160px;
+    display:inline-block;
+}
+
+nav ul li a{
+    color:white;
+    font-size:17px ;
+   
+}
+
+nav ul li a:hover{
+    color:#0d89f0;;
+    border-bottom: 1px solid #0d89f0;
+
+}
+
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+    z-index: 100;
+}
+.dropdown_content {
+    display:none;
+    position:absolute;
+    padding:12px 16px;
+    z-index: 1;
+    background-color: black;
+}
+.dropdown:hover .dropdown_content{
+    display:block;
+}
+.dropdown_content li{
+    text-align: left;
+    padding: 3px;
+}
+.dropdown_content li:hover{
+    background-color: #ddd;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; 
+    border: 1px solid #888;
+    width: 50%; 
+  }
+.close {
+    
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+  }
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+ } 
+form {
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height:100px;
+  }
+  
+  /* Set a style for all buttons */
+ .containter-item button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border-radius: 10px;
+    width:126px;
+    font-size: 20px;
+    border:none;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    /* margin: 24px 0 12px 0; */
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 100%;
+    height:370px;
+    margin:0;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+    
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  } 
+.login{
+    width:100%;
+    height:50px;
+    color:black;
+    font-size: 20px;
+    background-color: greenyellow;
+    border:none;
+}
+ /* .login:hover{
+    opacity:0;
+}  */
+
+
+.headerimg img {
+    width: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    justify-content: space-around;
+}
+
+.content {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.content_item {
+    flex: 1 1 0;
+}
+
+.content_item .namefood {
+    font-size: 20px;
+    font-style: italic;
+    padding-left: 50px;
+}
+
+.content_item .charge {
+    font-size: 20px;
+    color: #ed6ea0;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+.content_item .stock {
+    background-color: greenyellow;
+    border-radius: 3px;
+
+    color: white;
+    padding: 3px 10px;
+
+}
+
+.content_item .number label {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.content_item .number .txt-quantity .input[type=number] {
+
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.content_item img {
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 300px;
+}
+.content_item img:hover{
+    animation:zoomin-zoomout 2s ease infinite;
+}
+@keyframes zoomin-zoomout {
+    0% {
+      transform: scale(1.5, 1.5);
+    }
+    
+    100% {
+      transform: scale(1, 1);
+    }
+}
+
+.content_item .content_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_item .button-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.button-area button {
+    flex: 1;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 2px;
+    color: white;
+
+}
+
+.button-area .btn_add {
+    background-color: rgb(42, 215, 42); 
+    border-radius: 10px;
+}
+
+
+.button-area .btn_buy {
+   background-color: rgba(210, 5, 5, 0.864);
+   border-radius: 10px;
+}
+.button-area a:visited{
+    color:white;
+}
+.button-area .btn_add:hover{
+    opacity:0.5;
+    transition:0s;
+}
+
+.button-area .btn_buy:hover{
+    opacity:0.5;
+    transition:0s;
+}
+
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    bottom:0;
+    width:100%;
+    margin-top:50px;
+    color:white;
+    background-color: black;
+}
+.footer-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom:50px;
+    padding-top:40px;
+}
+
+
+footer .social-icon li a:hover #child-1{
+    color: #0d89f0;
+}
+.footer .social-icon li a:hover #child-2{
+    color: #1da1f2;
+}
+footer .social-icon li a:hover #child-4{
+    color:red;
+}
+.contact{
+    display:flex;
+    flex-wrap: wrap;
+}
+.about-us{
+    width:32.5%;
+    padding-left: 50px;
+
+}
+.about-us .logo{
+    width:50%;
+}
+.about-us .logo img{
+    width:100%;
+}
+.contact-us {
+    padding-left:20px;
+    width: 32.5%;
+    justify-content: center;
+}
+.contact-us .social-icon{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px;
+}
+.contact-us .social-icon  a{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background:aqua ;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    color:white;
+
+}
+
+
+.quick-link{
+    width:32.5%;
+    position: relative;
+}
+.quick-link li{
+    list-style: none;
+}
+.quick-link li a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quick-link li a:hover{
+    color:#0d89f0;
+}
+
+
+.image img{
+    width:1000px;
+    height:400px;
+}
+.open-button{
+    background-color: rgb(131, 131, 255);
+    color:white;
+    padding:16px 20px;
+    border-radius: 50%;
+    border:none;
+    cursor:pointer;
+    opacity:0.8;
+    position:fixed;
+    bottom:23px;
+    right:28px;
+    height:50px;
+    width:50px;
+    transition:0.3s;
+    /* box-shadow: 0 10px 30px 0 rgb(251, 197, 80); */
+}
+.open-button i .fa fa-comments{
+    background-color: white;
+}
+.chat p{
+    font-size: 30px;
+    /* width:100%; */
+}
+.chat-popup{
+    display:none;
+    position:fixed;
+    bottom:0;
+    right:15px;
+    z-index: 9;
+    min-width:300px;
+    max-width: 400px;
+    min-height: 450px;
+    max-height: 500px; 
+
+}
+.form-container{
+    max-width: 300px;
+    padding:10px;
+    background-color: white;
+    border-radius: 8px;
+    height:430px;
+}
+.form-container .chat{
+    background-color: cornflowerblue;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.form-container .typearea{
+    height: 310px;
+}
+.form-container textarea{
+    width:100%;
+    padding:15px;
+    margin:5px 0 22px 0;
+    border:none;
+    background:#f1f1f1;
+    border-radius: 8px;
+    resize:none;
+    min-height: 200px;
+    height:100%;
+}
+
+.form-container .send{
+   
+    size:50px;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.send .mess{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: 36px;
+    line-height: 40px;
+    margin: 8px 0;
+    padding-left: 12px;
+}
+.send .mess input{
+    background: transparent;
+    border: 0;
+    color: initial;
+    color: var(--primary-text, initial);
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    width: 226px;
+}
+.send .send-item .icon-send{
+    margin-top: 41px
+}
+ .form-container .cancel{
+
+    color:black;
+    
+    float:right;
+    margin-top:10px;
+} 
+.form-container .btn:hover, .open-button:hover{
+    opacity:1;
+}

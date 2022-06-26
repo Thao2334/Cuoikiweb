@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta property="og:title" content="Đăng kí/ Đăng nhập"/>
+        <title>Đăng nhập</title>
+        <meta name="keywords" content="Web đặt đồ ăn vặt, nước uống"/>
+        <meta name="description" content="Trang đặt đồ ăn vặt, nước uống ngon bổ rẻ">
+        <link rel="stylesheet" href="signup.css"  >
+        <script src="signup.js" defer></script>
+        
+        
+
+        
+    </head>
+    <body>
+        
+        <!-- <section>
+            <div class="container">
+              <div class="form sign-in-form">
+                <div class="wrapper">
+                  <form action="#" method="post" id="form-1">
+                    <h1>Sign In</h1>
+                    <p>use your email and password to sign in</p>
+                    <div class="form-group">
+                    
+                    <input type="email" placeholder="Email" id="email">
+                    <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" placeholder="password" id="password">
+                      <span class="form-message"></span>
+                    </div>
+                    <button>Sign In</button>
+                    
+                  </form>
+                </div>
+              </div>
+              <div class="form sign-up-form active">
+                <div class="wrapper">
+                  <form action="#">
+                    <h1>Sign up</h1>
+                    <p>Please, provide all the correct info to create an account</p>
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="password">
+                    <button>Sign Up</button>
+                  </form>
+                </div>
+              </div>
+              <div class="overlay-container">
+                <div class="overlay">
+                  <div class="overlay-left">
+                    <h1>Create Account</h1>
+                    <p>or</p>
+                    <button id="signInButton">Log In</button>
+                  </div>
+                  <div class="overlay-right">
+                    <h1>Please, Log In</h1>
+                    <p>or</p>
+                    <button id="signUpButton">Create Account</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section> -->
+          
+          <!-- *******************   -->
+          <!--  This Code is for only the floating card in right bottom corner -->
+          <!-- ********************  -->
+          <div class="main">
+
+            <!-- <div class="image">
+              <img src="https://i.pinimg.com/564x/ae/6f/47/ae6f47eb52f4d87b4f4666eb2544a533.jpg">
+            </div> -->
+      
+            <form action="" method="POST" class="form" id="form-2">
+              <h3 class="heading">Sign in</h3>
+              <p class="desc">Use your email and password to sign in</p>
+      
+              <div class="spacer"></div>
+      
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
+              </div>
+      
+              <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+              </div>
+      
+              <button class="form-submit">Đăng nhập</button>
+            </form>
+      
+          </div>
+          
+          <script>
+      
+            document.addEventListener('DOMContentLoaded', function () {
+              // Mong muốn của chúng ta
+              
+      
+      
+              Validator({
+                form: '#form-2',
+                formGroupSelector: '.form-group',
+                errorSelector: '.form-message',
+                rules: [
+                  Validator.isEmail('#email'),
+                  Validator.minLength('#password', 6),
+                ],
+                onSubmit: function (data) {
+                  // Call API
+                  console.log(data);
+                }
+              });
+            });
+      
+          </script>
+          
+       
+        
+    </div>
+    
+    </body>
+    </html>
